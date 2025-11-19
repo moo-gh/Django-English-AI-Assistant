@@ -1,0 +1,266 @@
+{
+	"info": {
+		"_postman_id": "f4cf90dc-1597-4ad2-af4d-526d6fc2b521",
+		"name": "English Assistant",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39098349"
+	},
+	"item": [
+		{
+			"name": "grammar",
+			"item": [
+				{
+					"name": "list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://english-assistant.m-gh.com/api/v1/gra/grammar/",
+							"protocol": "https",
+							"host": [
+								"english-assistant",
+								"m-gh",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"gra",
+								"grammar",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "expression",
+			"item": [
+				{
+					"name": "list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://english-assistant.m-gh.com/api/v1/exp/expression/",
+							"protocol": "https",
+							"host": [
+								"english-assistant",
+								"m-gh",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"exp",
+								"expression",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "chat",
+			"item": [
+				{
+					"name": "history",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/cht/history/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"cht",
+								"history",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "generate otp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"mo.ghorb@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://english-assistant.m-gh.com/api/v1/usr/auth/generate-otp/",
+							"protocol": "https",
+							"host": [
+								"english-assistant",
+								"m-gh",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"usr",
+								"auth",
+								"generate-otp",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verify otp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"mo.ghorb@gmail.com\",\r\n    \"otp_code\": \"007372\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://english-assistant.m-gh.com/api/v1/usr/auth/verify-otp/",
+							"protocol": "https",
+							"host": [
+								"english-assistant",
+								"m-gh",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"usr",
+								"auth",
+								"verify-otp",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"mo.ghorb@gmail.com\",\r\n    \"otp_code\": \"007372\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://english-assistant.m-gh.com/api/v1/usr/profile/",
+							"protocol": "https",
+							"host": [
+								"english-assistant",
+								"m-gh",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"usr",
+								"profile",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"mo.ghorb@gmail.com\",\r\n    \"otp_code\": \"007372\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://english-assistant.m-gh.com/api/v1/usr/profile/",
+							"protocol": "https",
+							"host": [
+								"english-assistant",
+								"m-gh",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"usr",
+								"profile",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
