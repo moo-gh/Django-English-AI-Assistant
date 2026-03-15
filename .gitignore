@@ -8,7 +8,6 @@ __pycache__
 *.sql
 *.sql.gz
 db.sqlite3
-todo
 venv
 static
 backend_db
